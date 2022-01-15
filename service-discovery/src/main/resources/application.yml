@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: service-discovery
+
+server:
+  port: 9000
+
+#eureka: 
+#  instance:
+#    hostname: localhost
+#  client:
+#    registerWithEureka: true
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaulZone: http://${eureka.instance.hostname}:${server.port}/eureka
+#  server:
+#    wait-time-in-ms-when-sync-empty: 3000
+
+#eureka:
+#  instance:
+#    instance-id: ${spring.application.name}:${random.uuid}
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:${server.port}/eureka/
